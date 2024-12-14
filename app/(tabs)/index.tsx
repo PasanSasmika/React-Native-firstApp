@@ -1,5 +1,8 @@
 import { Button, Text, TextInput, View, Image } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { Icon } from '@rneui/themed';
+
+
 
 function LoginField(){
   return(
@@ -10,11 +13,26 @@ function LoginField(){
       <View style={{backgroundColor: 'white', borderRadius:20, height:65,  marginTop:16,marginHorizontal:30, justifyContent:'center',paddingLeft:20}}>
         <TextInput placeholder="Your Password" placeholderTextColor={'#000'} style={{fontSize:18}}/>
       </View>
+      <SignInButton/>
     </View>
   );
 }
 
 
+function SignInButton(){
+  return(
+    <View style={{flexDirection: 'row', marginTop: 20}}>
+      <View style={{ height:70, flex:1 , justifyContent:'center'}}>
+        <Text style={{fontSize:25, fontWeight:'500', color:'#000', marginLeft:40}}>Sign In</Text>
+      </View>
+      <View style={{ height:70, flex:1, justifyContent:'center', alignItems:'flex-end'}}>
+        <View style={{width:55, height:55, backgroundColor: 'yellow', marginRight:40, borderRadius:100, justifyContent:'center', alignItems:'center'}}>
+        <Icon size={40} name="arrow-forward-ios" type="material" color="black" />
+        </View>
+      </View>
+    </View>
+  )
+}
 
  function HomeScreen() {
 
@@ -30,7 +48,7 @@ function LoginField(){
   <KeyboardAwareScrollView keyboardShouldPersistTaps={'never'}>
 
   <LoginField/>
-  
+
   </KeyboardAwareScrollView> 
   </View>
  
