@@ -1,4 +1,5 @@
 import { Button, Text, TextInput, View, Image } from "react-native";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 function LoginField(){
   return(
@@ -19,16 +20,20 @@ function LoginField(){
 
   return (
    
-  <View style={{ backgroundColor: 'white', flex:1}}> 
+  
+    <View style={{ backgroundColor: 'white', flex:1}}>
   <Image style={{width:'100%', height:'100%',position:'absolute'}} source={require('../../assets/images/bg.jpg')}/>
 
+  
   <Text style={{fontSize:45, color:'white', fontWeight:'600', marginTop:100 , marginLeft:20}}>{'Welcome\n Back'}</Text>
 
-  <LoginField/>
+  <KeyboardAwareScrollView keyboardShouldPersistTaps={'never'}>
 
-   
-    
+  <LoginField/>
+  
+  </KeyboardAwareScrollView> 
   </View>
+ 
   );  
 }
 
