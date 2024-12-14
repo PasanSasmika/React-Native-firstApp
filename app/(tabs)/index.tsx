@@ -6,14 +6,18 @@ import { Icon } from '@rneui/themed';
 
 function LoginField(){
   return(
-    <View style={{marginTop:120}} >
+    <View style={{marginTop:80}} >
       <View style={{backgroundColor: 'white', borderRadius:20, height:65, marginHorizontal:30, justifyContent:'center',paddingLeft:20}}>
         <TextInput placeholder="Your Email" placeholderTextColor={'#000'} style={{fontSize:18}}/>
       </View>
       <View style={{backgroundColor: 'white', borderRadius:20, height:65,  marginTop:16,marginHorizontal:30, justifyContent:'center',paddingLeft:20}}>
         <TextInput placeholder="Your Password" placeholderTextColor={'#000'} style={{fontSize:18}}/>
       </View>
+
       <SignInButton/>
+      <BottomSection/>
+      
+      
     </View>
   );
 }
@@ -30,6 +34,20 @@ function SignInButton(){
         <Icon size={40} name="arrow-forward-ios" type="material" color="black" />
         </View>
       </View>
+    </View>
+  )
+}
+
+
+function  BottomSection(){
+  return(
+    <View style={{flexDirection: 'row', marginTop: 20}}>
+      <View style={{ height:70, flex:1 , justifyContent:'center'}}>
+        <Text style={{fontSize:16, fontWeight:'700', color:'#000', marginLeft:40}}>Sign Up</Text>
+      </View>
+     <View style={{height:70, flex:2, justifyContent:'center', alignItems:'flex-end'}}>
+      <Text style={{fontSize:16, fontWeight:'700', color:'#000', marginRight:40}}>Forget Password</Text>
+     </View>
     </View>
   )
 }
